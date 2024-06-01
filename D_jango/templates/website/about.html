@@ -1,14 +1,9 @@
-{% load static %}
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Django</title>
+{% extends "layout.html" %}
 
-    <link rel="stylesheet" href="{% static 'style.css' %}">
-</head>
-<body>
-    <h1>Django Template | About Page</h1>
-</body>
-</html>
+{% block title %}
+Home Page
+{% endblock %}
+
+{% block content %}
+<h1 class="bg-orange-500 text-white text-3xl py-4">Django | About Page</h1>
+{% endblock %}
