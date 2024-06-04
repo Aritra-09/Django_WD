@@ -12,3 +12,6 @@
 ### Django command to create admin user
 > python manage.py createsuperuser
 
+### Django command to create migration
+> python manage.py makemigrations <app_name>
+

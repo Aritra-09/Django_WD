@@ -1,9 +1,32 @@
 {% extends "layout.html" %}
 
 {% block title %}
-Home Page
+CHAI Page
 {% endblock %}
 
 {% block content %}
-<h1 class= "bg-orange-500 text-white">Django App | Home Page</h1>
+<h1 class= "bg-orange-500 text-white">Django App | Chai Shop Home Page</h1>
+
+<div class='grid grid-cols-3 gap-4 m-4'>
+{% for chai in chais %}
+    <div class="bg-orange-500 p-5 rounded">
+        <img class="rounded w-full h-auto" src="{{chai.image.url}}" alt="">
+        <div class="flex justify-around">
+            <h3>{{chai.name}}</h3>
+            <h5>{{chai.price}}Rs.</h5>
+        </div>
+        <a href="{% url 'chai_description' chai.id %}">
+            <button type="button" class="w-full bg-white text-black">
+                {{chai.type}} - {{chai.id}}
+            </button>
+        </a>
+    </div>
+
+    
+
+{% endfor %}
+</div>
+
 {% endblock %}
+
+
